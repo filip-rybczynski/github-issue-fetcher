@@ -1,6 +1,6 @@
-defmodule Issues do
+defmodule IssueFetcher do
   @moduledoc """
-  Documentation for `Issues`.
+  Documentation for `IssueFetcher`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule Issues do
 
   ## Examples
 
-      iex> Issues.hello()
+      iex> IssueFetcher.hello()
       :world
 
   """
