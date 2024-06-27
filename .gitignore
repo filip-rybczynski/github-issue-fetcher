@@ -24,3 +24,6 @@ issue_fetcher-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# built version
+issue_fetcher
