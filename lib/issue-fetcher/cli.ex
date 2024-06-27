@@ -1,5 +1,7 @@
 defmodule IssueFetcher.CLI do
   @default_count 4
+  import IssueFetcher.TableFormatter, only: [print_table_for_columns: 2]
+
   @moduledoc """
   Handle the command line parsing and the dispatch to the various functions that end up generating a table of the last _n_ issues in a github project 
   """
@@ -48,6 +50,7 @@ defmodule IssueFetcher.CLI do
     |> decode_response()
     |> sort_into_descending_order()
     |> last(count)
+    |> print_table_for_columns(["number", "created_at", "title"])
   end
 
   def decode_response({:ok, body}), do: body
